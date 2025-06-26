@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COSMIC SOUNDSCAPE | Youtube Music Visualizer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="visual.js" defer></script>
+  </head>
+  <body>
+    <div class="scanlines"></div>
+    <div class="grid-overlay"></div>
+
+    <div class="container">
+      <header class="header">
+        <div class="title-container">
+          <h1 class="title">COSMIC SOUNDSCAPE</h1>
+          <div class="subtitle">
+            IMMERSIVE YOUTUBE MUSIC VISUALIZER &COPY;<br />
+            DESIGNED BY BRIAN RIENDEAU
+          </div>
+        </div>
+        <div class="controls">
+          <button class="control-btn" id="fullscreen-btn">
+            <i class="fas fa-expand"></i>
+            <span>FULLSCREEN</span>
+          </button>
+          <button class="control-btn" id="demo-btn">
+            <i class="fas fa-music"></i>
+            <span>DEMO</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="visualizer-container">
+        <canvas id="visualizer-canvas"></canvas>
+        <div class="visualization-mode" id="visualization-mode">
+          QUANTUM VORTEX
+        </div>
+
+        <div class="visualization-selector" id="visualization-selector">
+          <button class="vis-select-btn" data-mode="0">GALACTIC WAVES</button>
+          <button class="vis-select-btn" data-mode="1">NEURAL PATTERNS</button>
+          <button class="vis-select-btn active" data-mode="2">
+            QUANTUM VORTEX
+          </button>
+          <button class="vis-select-btn" data-mode="3">COSMIC RHYTHMS</button>
+          <button class="vis-select-btn" data-mode="4">
+            STELLAR RESONANCE
+          </button>
+        </div>
+
+        <div class="loading-indicator" id="loading-indicator">
+          <div class="spinner"></div>
+          <div class="loading-text">LOADING AUDIO STREAM...</div>
+        </div>
+
+        <div class="error-message" id="error-message">
+          <h3>AUDIO STREAM ERROR</h3>
+          <p id="error-details">
+            Failed to load audio source. Please try another URL or file.
+          </p>
+          <button class="control-btn" id="retry-btn" style="margin-top: 15px">
+            <i class="fas fa-redo"></i>
+            <span>RETRY</span>
+          </button>
+        </div>
+
+        <div class="center-display" id="center-display">
+          <div class="center-title">AUDIO DIMENSIONS</div>
+          <div class="center-subtitle">
+            PASTE A YOUTUBE LINK OR UPLOAD MUSIC
+          </div>
+
+          <div class="video-input-container">
+            <div class="input-title">AUDIO SOURCE</div>
+
+            <div class="input-tabs">
+              <div class="tab active" data-tab="youtube">YOUTUBE</div>
+              <div class="tab" data-tab="file">FILE</div>
+              <div class="tab" data-tab="demo">DEMO</div>
+            </div>
+
+            <div class="tab-content active" id="youtube-tab">
+              <input
+                type="text"
+                class="url-input"
+                id="youtube-url"
+                placeholder="https://www.youtube.com/watch?v=..."
+                value="https://www.youtube.com/watch?v=4gX0QO8XZf4"
+              />
+              <button class="visualize-btn" id="youtube-btn">
+                ACTIVATE YOUTUBE VISUALIZER
+              </button>
+            </div>
+
+            <div class="tab-content" id="file-tab">
+              <input
+                type="file"
+                id="audio-upload"
+                accept="audio/*"
+                style="display: none"
+              />
+              <button class="visualize-btn" id="upload-btn">
+                UPLOAD MUSIC FILE
+              </button>
+            </div>
+
+            <div class="tab-content" id="demo-tab">
+              <button class="visualize-btn" id="demo-btn2">
+                ACTIVATE DEMO TRACK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="status-bar">
+          <div class="status-item">
+            <div class="status-indicator online"></div>
+            <span>VISUALIZER: ACTIVE</span>
+          </div>
+          <div class="status-item">
+            <div class="status-indicator secure"></div>
+            <span>RENDERING: OPTIMAL</span>
+          </div>
+          <div class="status-item">
+            <div class="status-indicator warning"></div>
+            <span>INTENSITY: <span id="intensity-value">87%</span></span>
+          </div>
+        </div>
+
+        <div class="audio-controls">
+          <button class="audio-btn" id="play-btn">
+            <i class="fas fa-play"></i>
+          </button>
+          <button class="audio-btn" id="pause-btn">
+            <i class="fas fa-pause"></i>
+          </button>
+          <button class="audio-btn" id="volume-btn">
+            <i class="fas fa-volume-up"></i>
+          </button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- The Youtube player API -->
+    <div id="youtube-player" style="display: none"></div>
+  </body>
+</html>
