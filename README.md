@@ -24,8 +24,9 @@ COSMIC SOUNDSCAPE is a futuristic, browser-based music visualizer that transform
 - FontAwesome + Google Fonts
 
 ## 📁 How to Use
-
+Visit the live link above or
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/cosmic-soundscape.git
    cd cosmic-soundscape
+   run liveserver web extension or a preview extension
