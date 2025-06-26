@@ -29,4 +29,3 @@ COSMIC SOUNDSCAPE is a futuristic, browser-based music visualizer that transform
    ```bash
    git clone https://github.com/yourusername/cosmic-soundscape.git
    cd cosmic-soundscape
-  ```
