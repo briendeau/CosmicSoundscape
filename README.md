@@ -1,7 +1,7 @@
 # 🌌 COSMIC SOUNDSCAPE  
 **Immersive YouTube Music Visualizer**
 
-COSMIC SOUNDSCAPE is a futuristic, browser-based music visualizer that transforms YouTube audio or uploaded music files into mesmerizing, space-inspired visual animations. Built for modern browsers using HTML5 Canvas and pure JavaScript, this project focuses on performance, responsiveness, and visual engagement.
+COSMIC SOUNDSCAPE is a futuristic, browser-based music visualizer that transforms YouTube audio or uploaded music files into mesmerizing space-themed visual animations. Built for modern browsers using HTML5 Canvas and pure front-end JavaScript, this project focuses on performance, responsiveness, and visual engagement.
 
 ## 🚀 Features
 
