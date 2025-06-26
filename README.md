@@ -13,7 +13,7 @@ COSMIC SOUNDSCAPE is a futuristic, browser-based music visualizer that transform
 
 ## 🖼 Live Preview
 
-> _Deploy a live version on GitHub Pages or Vercel and update this section with a link._
+>  https://briendeau.github.io/CosmicSoundscape/
 
 ## 🛠 Tech Stack
 
